@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Calm Resilience Security mark</title>
+  <desc id="desc">A compact shield and ripple symbol for Calm Resilience Security Ltd.</desc>
+  <rect width="512" height="512" rx="64" fill="#132625"/>
+  <path d="M256 74L372 122V224C372 321 326 389 256 423C186 389 140 321 140 224V122L256 74Z" fill="#0F6A57"/>
+  <path d="M256 117L335 150V224C335 300 303 355 256 383C209 355 177 300 177 224V150L256 117Z" stroke="#F4E8CF" stroke-width="12"/>
+  <circle cx="256" cy="228" r="30" fill="#F1B24A"/>
+  <path d="M256 166C291.346 166 320 194.654 320 230C320 265.346 291.346 294 256 294C220.654 294 192 265.346 192 230" stroke="#F4E8CF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M256 136C310.124 136 354 179.876 354 234C354 288.124 310.124 332 256 332C201.876 332 158 288.124 158 234" stroke="#78B8A8" stroke-width="12" stroke-linecap="round" opacity="0.92"/>
+  <path d="M256 103C328.35 103 387 161.65 387 234C387 306.35 328.35 365 256 365C183.65 365 125 306.35 125 234" stroke="#2B8975" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
+</svg>

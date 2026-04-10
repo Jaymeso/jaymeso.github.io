@@ -72,6 +72,40 @@
         margin: 20px 0 0;
       }
 
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .brand img {
+        width: 112px;
+        height: 112px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+      }
+
+      .brand-copy p {
+        margin: 0;
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .brand-tag {
+        margin-top: 6px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: var(--accent);
+      }
+
       .intro {
         display: grid;
         grid-template-columns: 1.4fr 0.9fr;
@@ -170,6 +204,11 @@
       }
 
       @media (max-width: 740px) {
+        .brand {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
         .intro {
           grid-template-columns: 1fr;
         }
@@ -179,6 +218,13 @@
   <body>
     <main>
       <section class="card">
+        <div class="brand">
+          <img src="assets/calm-resilience-security-mark.svg" alt="Calm Resilience Security Ltd mark" />
+          <div class="brand-copy">
+            <p class="brand-name">Calm Resilience Security Ltd</p>
+            <p class="brand-tag">Calm under pressure. Security by design.</p>
+          </div>
+        </div>
         <p class="eyebrow">Security and GRC</p>
         <h1>James Omorogbe builds practical security and assurance work.</h1>
         <p class="lede">

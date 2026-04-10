@@ -1,0 +1,29 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Calm Resilience Security Ltd logo</title>
+  <desc id="desc">A shield and ripple brand mark beside the company name and strapline.</desc>
+  <rect width="1200" height="420" rx="28" fill="#F5EFE3"/>
+  <g transform="translate(48 60)">
+    <rect x="0" y="0" width="300" height="300" rx="28" fill="#132625"/>
+    <path d="M150 42L228 74V143C228 209 197 255 150 278C103 255 72 209 72 143V74L150 42Z" fill="#0F6A57"/>
+    <path d="M150 70L205 92V143C205 196 182 234 150 253C118 234 95 196 95 143V92L150 70Z" stroke="#F4E8CF" stroke-width="8"/>
+    <circle cx="150" cy="144" r="20" fill="#F1B24A"/>
+    <path d="M150 104C173.748 104 193 123.252 193 147C193 170.748 173.748 190 150 190C126.252 190 107 170.748 107 147" stroke="#F4E8CF" stroke-width="10" stroke-linecap="round"/>
+    <path d="M150 83C185.899 83 215 112.101 215 148C215 183.899 185.899 213 150 213C114.101 213 85 183.899 85 148" stroke="#78B8A8" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+    <path d="M150 60C198.601 60 238 99.3989 238 148C238 196.601 198.601 236 150 236C101.399 236 62 196.601 62 148" stroke="#2B8975" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  <g transform="translate(392 108)">
+    <text x="0" y="68" fill="#132625" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" letter-spacing="0.5">
+      Calm Resilience
+    </text>
+    <text x="0" y="132" fill="#132625" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" letter-spacing="0.5">
+      Security Ltd
+    </text>
+    <rect x="0" y="164" width="508" height="2" fill="#D7C7AC"/>
+    <text x="0" y="222" fill="#0F6A57" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="3.2">
+      CALM UNDER PRESSURE. SECURITY BY DESIGN.
+    </text>
+    <text x="0" y="274" fill="#55615D" font-family="Arial, Helvetica, sans-serif" font-size="22">
+      Security architecture, governance, risk, resilience, and practical assurance.
+    </text>
+  </g>
+</svg>
