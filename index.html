@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaymes O | GRC Training</title>
+    <meta
+      name="description"
+      content="Public landing page for GRC analyst training, workshops, and contact details."
+    />
+    <style>
+      :root {
+        --bg: #f5efe3;
+        --panel: rgba(255, 252, 245, 0.88);
+        --ink: #17211f;
+        --muted: #55615d;
+        --accent: #0b6e4f;
+        --accent-2: #d17b0f;
+        --line: rgba(23, 33, 31, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(209, 123, 15, 0.18), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(11, 110, 79, 0.18), transparent 32%),
+          linear-gradient(135deg, #efe4d1, var(--bg));
+      }
+
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px 20px;
+      }
+
+      .card {
+        width: min(860px, 100%);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 40px 28px;
+        box-shadow: 0 20px 60px rgba(23, 33, 31, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        font-size: 0.8rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 7vw, 4.8rem);
+        line-height: 0.95;
+      }
+
+      .lede {
+        max-width: 42rem;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: var(--muted);
+        margin: 20px 0 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+      .panel {
+        background: rgba(255, 255, 255, 0.62);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+
+      .panel h2 {
+        margin: 0 0 10px;
+        font-size: 1rem;
+      }
+
+      .panel p {
+        margin: 0;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: #fffdf7;
+      }
+
+      .button-secondary {
+        border: 1px solid var(--line);
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.66);
+      }
+
+      .note {
+        margin-top: 26px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      strong {
+        color: var(--accent-2);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <p class="eyebrow">GRC Analyst Training</p>
+        <h1>Practical governance, risk, and compliance training.</h1>
+        <p class="lede">
+          This public page is intentionally lightweight. It shares only public-safe
+          information about training offers, workshops, and contact details. All
+          curriculum assets, templates, and learner materials stay in a separate
+          <strong>private repository</strong>.
+        </p>
+
+        <div class="grid">
+          <article class="panel">
+            <h2>What this site is for</h2>
+            <p>Course overview, trainer profile, contact details, and a simple inquiry path.</p>
+          </article>
+          <article class="panel">
+            <h2>What stays private</h2>
+            <p>Workbooks, templates, capstone documents, trainer notes, and internal delivery assets.</p>
+          </article>
+          <article class="panel">
+            <h2>Ideal next step</h2>
+            <p>Replace placeholder copy with your bio, offer summary, and a contact email or form link.</p>
+          </article>
+        </div>
+
+        <div class="actions">
+          <a class="button button-primary" href="mailto:hello@example.com">Contact</a>
+          <a class="button button-secondary" href="https://github.com/jaymeso">GitHub</a>
+        </div>
+
+        <p class="note">
+          Suggested structure: keep training content in <code>grc-analyst-launchpad</code>
+          as a private repo, and publish only summary content from
+          <code>jaymeso.github.io</code>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
