@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jaymes O | Security and GRC</title>
+    <title>James Omorogbe | Security and GRC</title>
     <meta
       name="description"
-      content="Public landing page for security, GRC engineering, and training work."
+      content="Public landing page for James Omorogbe's security architecture, GRC engineering, and training work."
     />
     <style>
       :root {
@@ -72,6 +72,34 @@
         margin: 20px 0 0;
       }
 
+      .intro {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: 20px;
+        align-items: start;
+        margin-top: 28px;
+      }
+
+      .summary {
+        background: rgba(255, 255, 255, 0.58);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px;
+      }
+
+      .summary p {
+        margin: 0;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -95,6 +123,14 @@
         margin: 0;
         line-height: 1.6;
         color: var(--muted);
+      }
+
+      .section-title {
+        margin: 34px 0 14px;
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
       }
 
       .actions {
@@ -132,32 +168,58 @@
       strong {
         color: var(--accent-2);
       }
+
+      @media (max-width: 740px) {
+        .intro {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
     <main>
       <section class="card">
         <p class="eyebrow">Security and GRC</p>
-        <h1>Practical security, governance, and assurance work.</h1>
+        <h1>James Omorogbe builds practical security and assurance work.</h1>
         <p class="lede">
-          This public page is intentionally lightweight. It shares only public-safe
-          information about portfolio projects, training direction, and selected
-          public work. All curriculum assets, templates, and learner materials stay in a separate
+          This public page shares a focused view of security architecture, governance,
+          risk, and compliance engineering work. Training materials, workbooks, and
+          internal delivery content remain in a separate
           <strong>private repository</strong>.
         </p>
 
+        <div class="intro">
+          <div class="summary">
+            <p>
+              The work here sits at the intersection of cloud security, GRC engineering,
+              and executive-facing assurance. The emphasis is on translating controls,
+              evidence, and technical findings into something operational teams can use
+              and leadership can trust.
+            </p>
+          </div>
+          <div class="summary">
+            <ul class="list">
+              <li>Cloud security architecture</li>
+              <li>Zero-trust and identity controls</li>
+              <li>GRC-as-code and evidence workflows</li>
+              <li>Training and practical governance delivery</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="section-title">Featured Public Work</p>
         <div class="grid">
           <article class="panel">
-            <h2>What this site is for</h2>
-            <p>Portfolio visibility, a simple public presence, and links to selected work.</p>
+            <h2>GRC as Code Lab</h2>
+            <p>A governance engineering prototype that turns infrastructure findings into control outcomes, risk scoring, evidence, and executive reporting.</p>
           </article>
           <article class="panel">
-            <h2>What stays private</h2>
-            <p>Workbooks, templates, capstone documents, trainer notes, and internal delivery assets.</p>
+            <h2>GitHub Profile</h2>
+            <p>A curated public profile centered on practical security, cloud assurance, and governance-focused technical work.</p>
           </article>
           <article class="panel">
-            <h2>What to explore</h2>
-            <p>Start with the GRC as Code Lab, then use the GitHub profile for the broader body of work.</p>
+            <h2>Private Training Track</h2>
+            <p>Curriculum, templates, capstones, and learner materials are intentionally separated into a private repository.</p>
           </article>
         </div>
 
@@ -167,9 +229,8 @@
         </div>
 
         <p class="note">
-          Suggested structure: keep training content in <code>grc-analyst-launchpad</code>
-          as a private repo, and publish only summary content from
-          <code>jaymeso.github.io</code>.
+          Public-safe summaries live here. Delivery assets stay private in
+          <code>grc-analyst-launchpad</code>.
         </p>
       </section>
     </main>
