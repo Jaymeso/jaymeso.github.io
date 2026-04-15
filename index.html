@@ -333,6 +333,29 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .contact-panel {
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 12px 32px rgba(17, 32, 28, 0.06);
+      }
+
+      .contact-detail {
+        display: inline-block;
+        margin: 8px 0 0;
+        color: var(--green-dark);
+        font-size: clamp(1.1rem, 2vw, 1.45rem);
+        font-weight: 800;
+        word-break: break-word;
+      }
+
+      .contact-note {
+        margin-top: 12px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
       .card,
       .faq-item,
       .price-card {
@@ -520,6 +543,7 @@
             <a href="#weeks">Curriculum</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
           </nav>
         </header>
 
@@ -534,12 +558,7 @@
               portfolio artefacts, and industry-aligned delivery.
             </p>
             <div class="actions">
-              <a
-                class="button button-primary"
-                href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20enrolment%20enquiry"
-              >
-                Enrol now
-              </a>
+              <a class="button button-primary" href="#contact">Enrol now</a>
               <a class="button button-secondary" href="#weeks">View curriculum</a>
             </div>
           </div>
@@ -803,12 +822,7 @@
                   <li>Self-directed progression</li>
                 </ul>
                 <div class="pricing-foot">
-                  <a
-                    class="button button-secondary"
-                    href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20Self-Paced%20enquiry"
-                  >
-                    Choose Self-Paced
-                  </a>
+                  <a class="button button-secondary" href="#contact">Choose Self-Paced</a>
                 </div>
               </article>
               <article class="price-card featured">
@@ -826,12 +840,7 @@
                   <li>Ideal for first-cohort learners</li>
                 </ul>
                 <div class="pricing-foot">
-                  <a
-                    class="button button-primary"
-                    href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20Guided%20launch%20offer"
-                  >
-                    Choose Guided
-                  </a>
+                  <a class="button button-primary" href="#contact">Choose Guided</a>
                 </div>
               </article>
               <article class="price-card">
@@ -847,12 +856,7 @@
                   <li>Higher-touch guidance</li>
                 </ul>
                 <div class="pricing-foot">
-                  <a
-                    class="button button-secondary"
-                    href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20Premium%20enquiry"
-                  >
-                    Enquire about Premium
-                  </a>
+                  <a class="button button-secondary" href="#contact">Enquire about Premium</a>
                 </div>
               </article>
             </div>
@@ -883,7 +887,7 @@
             </div>
           </section>
 
-          <section class="cta-band" id="contact">
+          <section class="cta-band">
             <p class="section-kicker" style="color: rgba(255, 252, 247, 0.72)">Next Step</p>
             <h2>Develop practical GRC capability that employers recognise.</h2>
             <p>
@@ -891,19 +895,33 @@
               in the work expected of an entry-level GRC analyst.
             </p>
             <div class="actions">
-              <a
-                class="button button-primary"
-                href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20enrolment%20enquiry"
-              >
-                Enrol now
-              </a>
-              <a
-                class="button button-secondary"
-                href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20waitlist"
-              >
-                Join the waitlist
-              </a>
+              <a class="button button-primary" href="#contact">Enrol now</a>
+              <a class="button button-secondary" href="#contact">Join the waitlist</a>
             </div>
+          </section>
+
+          <section class="section" id="contact">
+            <div class="section-heading">
+              <p class="section-kicker">Enrolment Enquiries</p>
+              <h2>Ready to join or ask a question?</h2>
+              <p>
+                Send an email with the option you are interested in: Self-Paced,
+                Guided, Premium, or Waitlist.
+              </p>
+            </div>
+            <article class="contact-panel">
+              <h3>Email Calm Resilience Security Ltd</h3>
+              <a class="contact-detail" href="mailto:james.omorogbe@calmsecurity.uk">
+                james.omorogbe@calmsecurity.uk
+              </a>
+              <p class="contact-note">
+                Suggested subject: <strong>GRC Analyst Launchpad enrolment enquiry</strong>
+              </p>
+              <p class="contact-note">
+                If your device does not open an email app automatically, copy the
+                address above and send your enquiry directly from your email account.
+              </p>
+            </article>
           </section>
         </div>
 
