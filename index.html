@@ -6,20 +6,24 @@
     <title>GRC Analyst Launchpad | Calm Resilience Security Ltd</title>
     <meta
       name="description"
-      content="GRC Analyst Launchpad is an 8-week hands-on programme for entry-level cybersecurity professionals who want practical ISO 27001, risk, vendor risk, and audit experience."
+      content="Become a job-ready GRC analyst in 8 weeks. Learn ISO 27001, risk, audit, controls, and vendor management through structured practical training."
     />
     <style>
       :root {
         --bg: #f4efe5;
-        --paper: rgba(255, 252, 246, 0.88);
-        --paper-strong: #fffaf1;
+        --paper: #fffaf1;
+        --paper-soft: rgba(255, 252, 246, 0.78);
         --ink: #11201c;
         --muted: #536560;
-        --line: rgba(17, 32, 28, 0.12);
+        --line: rgba(17, 32, 28, 0.13);
         --green: #0d6a50;
+        --green-dark: #17362d;
         --gold: #b97816;
-        --forest: #17362d;
+        --blue: #163a70;
+        --success: #e8f1ed;
         --shadow: 0 22px 70px rgba(17, 32, 28, 0.1);
+        --radius: 24px;
+        --max: 1160px;
       }
 
       * {
@@ -35,8 +39,8 @@
         color: var(--ink);
         font-family: Georgia, "Times New Roman", serif;
         background:
-          radial-gradient(circle at top left, rgba(13, 106, 80, 0.16), transparent 28%),
-          radial-gradient(circle at 85% 10%, rgba(185, 120, 22, 0.16), transparent 22%),
+          radial-gradient(circle at 8% 4%, rgba(13, 106, 80, 0.16), transparent 28%),
+          radial-gradient(circle at 92% 0%, rgba(185, 120, 22, 0.14), transparent 26%),
           linear-gradient(180deg, #efe7d9 0%, var(--bg) 48%, #ece4d4 100%);
       }
 
@@ -44,35 +48,40 @@
         color: inherit;
       }
 
-      main {
-        width: min(1180px, calc(100% - 32px));
+      .page {
+        width: min(var(--max), calc(100% - 32px));
         margin: 0 auto;
         padding: 22px 0 72px;
       }
 
       .shell {
-        background: var(--paper);
+        background: rgba(255, 252, 246, 0.88);
         border: 1px solid var(--line);
-        border-radius: 28px;
+        border-radius: 30px;
         box-shadow: var(--shadow);
         overflow: hidden;
         backdrop-filter: blur(12px);
       }
 
       .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
         padding: 18px 24px;
         border-bottom: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.42);
+        background: rgba(255, 252, 246, 0.9);
+        backdrop-filter: blur(14px);
       }
 
       .brand {
         display: flex;
         align-items: center;
         gap: 14px;
+        text-decoration: none;
       }
 
       .brand img {
@@ -80,7 +89,7 @@
         height: 64px;
         border-radius: 18px;
         padding: 8px;
-        background: rgba(255, 255, 255, 0.82);
+        background: rgba(255, 255, 255, 0.84);
         border: 1px solid var(--line);
       }
 
@@ -106,34 +115,94 @@
         font-size: 0.95rem;
       }
 
-      .hero {
-        display: grid;
-        grid-template-columns: 1.3fr 0.8fr;
-        gap: 28px;
-        padding: 42px 24px 26px;
+      .top-links a {
+        text-decoration: none;
       }
 
-      .eyebrow {
+      .top-links a:hover {
+        color: var(--green-dark);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+        gap: 28px;
+        padding: 52px 24px 34px;
+      }
+
+      .eyebrow,
+      .section-kicker {
         margin: 0 0 14px;
         color: var(--green);
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        font-size: 0.8rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.62);
+        color: var(--green-dark);
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
+
+      .pill::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
       }
 
       h1 {
-        margin: 0;
-        font-size: clamp(2.6rem, 6vw, 5.3rem);
-        line-height: 0.95;
+        margin-bottom: 18px;
+        font-size: clamp(2.7rem, 6.4vw, 5.6rem);
+        line-height: 0.94;
+        letter-spacing: -0.055em;
         max-width: 12ch;
       }
 
-      .hero-copy p {
-        margin: 18px 0 0;
-        font-size: 1.12rem;
-        line-height: 1.75;
+      h2 {
+        margin-bottom: 12px;
+        font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 1.08rem;
+      }
+
+      .lead,
+      .section-heading p,
+      .card p,
+      .card li,
+      .price-card p,
+      .faq-item p,
+      .week-item p,
+      footer {
         color: var(--muted);
-        max-width: 44rem;
+        line-height: 1.7;
+      }
+
+      .lead {
+        max-width: 60ch;
+        font-size: 1.14rem;
       }
 
       .actions {
@@ -144,97 +213,106 @@
       }
 
       .button {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
         padding: 13px 18px;
         border-radius: 999px;
         text-decoration: none;
         font-weight: 700;
+        border: 1px solid transparent;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
       }
 
       .button-primary {
         background: var(--green);
         color: #fffcf7;
+        box-shadow: 0 14px 28px rgba(13, 106, 80, 0.18);
       }
 
       .button-secondary {
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.74);
+        border-color: var(--line);
       }
 
       .hero-card,
-      .panel,
+      .card,
       .faq-item,
       .price-card,
-      .week-card,
-      .highlight {
-        background: rgba(255, 255, 255, 0.68);
+      .week-item {
+        background: rgba(255, 255, 255, 0.7);
         border: 1px solid var(--line);
-        border-radius: 22px;
+        border-radius: var(--radius);
+        box-shadow: 0 12px 32px rgba(17, 32, 28, 0.06);
       }
 
       .hero-card {
-        padding: 20px;
+        padding: 22px;
+        align-self: start;
+      }
+
+      .snapshot-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .badge {
+        display: inline-flex;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: var(--success);
+        color: var(--green-dark);
+        border: 1px solid rgba(13, 106, 80, 0.18);
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .mini-list {
         display: grid;
-        gap: 14px;
-        align-content: start;
+        gap: 12px;
       }
 
-      .hero-card h2,
-      .section h2 {
-        margin: 0;
-        font-size: 1.3rem;
-      }
-
-      .hero-card p,
-      .panel p,
-      .section p,
-      .faq-item p,
-      .price-card p,
-      .week-card p,
-      .highlight p {
-        margin: 0;
+      .mini-item {
+        padding: 14px 15px;
+        border-radius: 16px;
+        background: rgba(244, 239, 229, 0.72);
+        border: 1px solid rgba(17, 32, 28, 0.08);
         color: var(--muted);
-        line-height: 1.7;
+        line-height: 1.55;
       }
 
-      .checklist,
-      .simple-list {
-        margin: 0;
-        padding-left: 20px;
-        color: var(--muted);
-        line-height: 1.8;
+      .mini-item strong {
+        display: block;
+        color: var(--ink);
+        margin-bottom: 3px;
       }
 
       .content {
-        padding: 8px 24px 32px;
+        padding: 0 24px 34px;
       }
 
       .section {
-        padding: 26px 0 0;
+        padding: 54px 0 0;
       }
 
-      .section-header {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        align-items: end;
-        margin-bottom: 16px;
-      }
-
-      .section-kicker {
-        margin: 0 0 8px;
-        color: var(--green);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-size: 0.75rem;
+      .section-heading {
+        max-width: 760px;
+        margin-bottom: 20px;
       }
 
       .grid-2,
       .grid-3,
-      .week-grid,
-      .pricing-grid,
-      .faq-grid,
-      .highlight-grid {
+      .grid-4,
+      .faq-grid {
         display: grid;
         gap: 16px;
       }
@@ -243,99 +321,161 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .grid-3,
-      .pricing-grid,
-      .highlight-grid {
+      .grid-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
-      .week-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
 
       .faq-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .panel,
-      .week-card,
-      .price-card,
+      .card,
       .faq-item,
-      .highlight {
-        padding: 20px;
+      .price-card {
+        padding: 22px;
       }
 
-      .panel h3,
-      .week-card h3,
-      .price-card h3,
-      .faq-item h3,
-      .highlight h3 {
-        margin: 0 0 10px;
-        font-size: 1.05rem;
+      .card ul,
+      .price-card ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.75;
       }
 
-      .split {
+      .week-list {
         display: grid;
-        grid-template-columns: 1fr 0.9fr;
-        gap: 16px;
+        gap: 12px;
       }
 
-      .emphasis {
-        color: var(--forest);
+      .week-item {
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        gap: 18px;
+        padding: 18px 20px;
+      }
+
+      .week-label {
+        color: var(--green);
+        font-weight: 800;
+      }
+
+      .week-item p {
+        margin-bottom: 0;
+      }
+
+      .offer-banner {
+        margin-bottom: 16px;
+        padding: 18px 20px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(185, 120, 22, 0.12), rgba(13, 106, 80, 0.1));
+        border: 1px solid rgba(185, 120, 22, 0.28);
+        color: var(--green-dark);
         font-weight: 700;
       }
 
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      .price-card {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .price-card.featured {
+        border-color: rgba(13, 106, 80, 0.36);
+        box-shadow: 0 18px 42px rgba(13, 106, 80, 0.12);
+      }
+
+      .price {
+        color: var(--green-dark);
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+      }
+
+      .price span {
+        color: var(--muted);
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .pricing-foot {
+        margin-top: auto;
+      }
+
+      .pricing-foot .button {
+        width: 100%;
+      }
+
       .cta-band {
-        margin-top: 26px;
-        padding: 26px 22px;
-        background: linear-gradient(135deg, rgba(13, 106, 80, 0.96), rgba(23, 54, 45, 0.96));
-        border-radius: 24px;
+        margin-top: 54px;
+        padding: 30px 24px;
+        background:
+          radial-gradient(circle at 88% 12%, rgba(185, 120, 22, 0.34), transparent 32%),
+          linear-gradient(135deg, rgba(13, 106, 80, 0.98), rgba(23, 54, 45, 0.98));
+        border-radius: var(--radius);
         color: #fffcf7;
       }
 
       .cta-band p {
         color: rgba(255, 252, 247, 0.84);
+        max-width: 62ch;
       }
 
       .cta-band .button-primary {
         background: #fffcf7;
-        color: var(--forest);
+        color: var(--green-dark);
       }
 
       .cta-band .button-secondary {
         background: transparent;
         color: #fffcf7;
-        border-color: rgba(255, 252, 247, 0.3);
+        border-color: rgba(255, 252, 247, 0.32);
       }
 
       footer {
-        padding: 18px 24px 26px;
-        color: var(--muted);
-        font-size: 0.92rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding: 24px;
+        border-top: 1px solid var(--line);
       }
 
-      @media (max-width: 960px) {
+      .footer-note {
+        max-width: 660px;
+      }
+
+      @media (max-width: 980px) {
         .hero,
-        .split,
         .grid-2,
         .grid-3,
-        .week-grid,
+        .grid-4,
         .pricing-grid,
-        .faq-grid,
-        .highlight-grid {
+        .faq-grid {
           grid-template-columns: 1fr;
         }
 
-        .section-header,
         .topbar {
           align-items: start;
           flex-direction: column;
         }
       }
 
-      @media (max-width: 640px) {
-        main {
-          width: min(100% - 16px, 1180px);
+      @media (max-width: 680px) {
+        .page {
+          width: min(100% - 16px, var(--max));
           padding-top: 8px;
         }
 
@@ -355,421 +495,429 @@
           width: 56px;
           height: 56px;
         }
+
+        .week-item {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
+    <main class="page">
       <div class="shell">
         <header class="topbar">
-          <div class="brand">
+          <a class="brand" href="#top" aria-label="Calm Resilience Security home">
             <img src="assets/calm-resilience-security-mark.svg" alt="Calm Resilience Security Ltd mark" />
             <div>
               <p class="brand-name">Calm Resilience Security Ltd</p>
               <p class="brand-tag">Calm under pressure. Security by design.</p>
             </div>
-          </div>
-          <nav class="top-links">
+          </a>
+          <nav class="top-links" aria-label="Main navigation">
             <a href="#programme">Programme</a>
+            <a href="#outcomes">Outcomes</a>
             <a href="#weeks">Curriculum</a>
-            <a href="#public-work">Public Work</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
           </nav>
         </header>
 
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">GRC Analyst Launchpad</p>
+        <section class="hero" id="top">
+          <div>
+            <span class="pill">Founding cohort offer available</span>
+            <p class="eyebrow" style="margin-top: 22px">GRC Analyst Launchpad</p>
             <h1>Become a job-ready GRC analyst in 8 weeks.</h1>
-            <p>
-              Learn ISO 27001, risk management, vendor risk, and audit by doing
-              real-world work instead of just watching lectures.
-            </p>
-            <p>
-              <span class="emphasis">GRC Analyst Launchpad</span> is a hands-on
-              training programme for entry-level cybersecurity professionals who
-              want to become useful in Governance, Risk &amp; Compliance from day one.
+            <p class="lead">
+              A structured, hands-on programme designed to build practical capability
+              in Governance, Risk &amp; Compliance through realistic scenarios,
+              portfolio artefacts, and industry-aligned delivery.
             </p>
             <div class="actions">
-              <a class="button button-primary" href="#contact">Enrol now</a>
-              <a class="button button-secondary" href="#contact">Join the waitlist</a>
+              <a
+                class="button button-primary"
+                href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20enrolment%20enquiry"
+              >
+                Enrol now
+              </a>
+              <a class="button button-secondary" href="#weeks">View curriculum</a>
             </div>
           </div>
 
-          <aside class="hero-card">
-            <h2>What you'll get</h2>
-            <ul class="checklist">
-              <li>8 structured weeks of training</li>
-              <li>A realistic fintech case study</li>
-              <li>Practical templates and student workbooks</li>
-              <li>Portfolio-ready artefacts for interviews</li>
-              <li>Beginner-friendly teaching grounded in real standards</li>
-            </ul>
+          <aside class="hero-card" aria-label="Programme snapshot">
+            <div class="snapshot-head">
+              <h2>Programme Snapshot</h2>
+              <span class="badge">Guided at Self-Paced Price</span>
+            </div>
+            <div class="mini-list">
+              <div class="mini-item">
+                <strong>Duration</strong>
+                8 structured weeks of practical GRC training.
+              </div>
+              <div class="mini-item">
+                <strong>Scenario</strong>
+                FinSure Payments Ltd, a realistic fintech case study.
+              </div>
+              <div class="mini-item">
+                <strong>Outputs</strong>
+                Risk register, SoA, policy, audit findings, and capstone pack.
+              </div>
+              <div class="mini-item">
+                <strong>Best fit</strong>
+                Entry-level analysts, career switchers, students, and graduates.
+              </div>
+            </div>
           </aside>
         </section>
 
         <div class="content">
           <section class="section">
-            <div class="split">
-              <article class="panel">
-                <h3>Most cybersecurity courses do not make you hireable</h3>
+            <div class="section-heading">
+              <p class="section-kicker">The Problem</p>
+              <h2>Most cybersecurity training does not make people job-ready.</h2>
+              <p>
+                Many entry-level programmes explain terminology but stop short of
+                showing how GRC operates in practice. Learners finish with theory,
+                but little confidence in risk, audit, ISO 27001, or real deliverables.
+              </p>
+            </div>
+            <div class="grid-3">
+              <article class="card">
+                <h3>Too theoretical</h3>
                 <p>
-                  A lot of entry-level cybersecurity training still leans too hard on
-                  theory, light on real work, and leaves people unable to explain
-                  risk, support audits, or maintain useful security artefacts inside
-                  a real business.
+                  Concepts are introduced without enough exposure to how security
+                  governance functions inside a real organisation.
                 </p>
               </article>
-              <article class="panel">
-                <h3>This programme trains you to do the actual job</h3>
+              <article class="card">
+                <h3>No real artefacts</h3>
                 <p>
-                  You will practise the tasks junior GRC analysts are expected to
-                  handle in growing organisations and leave with work you can
-                  discuss credibly in interviews.
+                  Learners finish without producing a risk register, SoA, policy, or
+                  audit outputs they can discuss credibly.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Weak interview readiness</h3>
+                <p>
+                  Without structured outputs and applied thinking, it is difficult to
+                  show employers practical capability.
                 </p>
               </article>
             </div>
           </section>
 
           <section class="section" id="programme">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Outcomes</p>
-                <h2>What you will learn how to do</h2>
-              </div>
+            <div class="section-heading">
+              <p class="section-kicker">The Approach</p>
+              <h2>A practical, role-aligned route into GRC.</h2>
+              <p>
+                GRC Analyst Launchpad is designed around the responsibilities of a
+                junior GRC analyst. The focus is not passive learning, but producing
+                work that reflects how governance, risk, and compliance are carried out.
+              </p>
             </div>
             <div class="grid-2">
-              <article class="highlight">
-                <h3>Core analyst skills</h3>
-                <ul class="simple-list">
-                  <li>Identify and describe risks clearly</li>
-                  <li>Build and maintain a risk register</li>
-                  <li>Understand ISO 27001 and how an ISMS works</li>
-                  <li>Map risks to controls</li>
+              <article class="card">
+                <h3>What you will learn to do</h3>
+                <ul>
+                  <li>Identify and articulate risks in business terms</li>
+                  <li>Build and maintain a structured risk register</li>
+                  <li>Understand ISO 27001 and ISMS fundamentals</li>
+                  <li>Map risks to appropriate controls</li>
+                  <li>Assess vendor risk and due diligence gaps</li>
+                  <li>Review audit evidence and write findings</li>
                 </ul>
               </article>
-              <article class="highlight">
-                <h3>Practical delivery skills</h3>
-                <ul class="simple-list">
-                  <li>Draft a Statement of Applicability</li>
-                  <li>Assess vendor risk</li>
-                  <li>Collect and review audit evidence</li>
-                  <li>Write clear findings and recommendations</li>
+              <article class="card">
+                <h3>Roles this prepares you for</h3>
+                <ul>
+                  <li>GRC Analyst</li>
+                  <li>Information Security Analyst</li>
+                  <li>Risk &amp; Compliance Analyst</li>
+                  <li>ISMS Support / ISO 27001 Support roles</li>
+                  <li>Audit and assurance support roles</li>
                 </ul>
               </article>
             </div>
           </section>
 
-          <section class="section">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Why This Is Different</p>
-                <h2>Built around real work, not passive content</h2>
-              </div>
+          <section class="section" id="outcomes">
+            <div class="section-heading">
+              <p class="section-kicker">Portfolio Outcomes</p>
+              <h2>What you will build.</h2>
+              <p>
+                Every major stage contributes to professional artefacts designed for
+                interview discussion, portfolio use, and practical confidence.
+              </p>
             </div>
-            <div class="highlight-grid">
-              <article class="highlight">
-                <h3>Realistic, hands-on learning</h3>
-                <p>
-                  You work inside the fictional but realistic FinSure Payments Ltd
-                  scenario and respond to incidents, assess risks, review controls,
-                  evaluate vendors, and prepare for audit.
-                </p>
+            <div class="grid-4">
+              <article class="card">
+                <h3>Risk Register</h3>
+                <p>Structured risks, scoring, owners, controls, and treatment decisions.</p>
               </article>
-              <article class="highlight">
-                <h3>Portfolio-first design</h3>
-                <p>
-                  Every major week produces artefacts you can keep and discuss in
-                  interviews, including a risk register, SoA, policy, audit
-                  findings, and a full capstone assessment pack.
-                </p>
+              <article class="card">
+                <h3>Statement of Applicability</h3>
+                <p>Relevant control selection, implementation status, and justification.</p>
               </article>
-              <article class="highlight">
-                <h3>Designed for beginners</h3>
-                <p>
-                  You do not need to be a penetration tester, cloud engineer, or
-                  compliance specialist to start. The structure is built for people
-                  entering GRC for the first time.
-                </p>
+              <article class="card">
+                <h3>Security Policy</h3>
+                <p>A concise, professional policy aligned to organisational need.</p>
               </article>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Audience</p>
-                <h2>Who this programme is for</h2>
-              </div>
-            </div>
-            <div class="grid-2">
-              <article class="panel">
-                <h3>A strong fit if you are</h3>
-                <ul class="simple-list">
-                  <li>Trying to break into cybersecurity through a realistic path</li>
-                  <li>Moving from IT, audit, compliance, or operations</li>
-                  <li>A student or graduate who wants practical portfolio work</li>
-                  <li>Early in your cybersecurity career and interested in GRC</li>
-                </ul>
-              </article>
-              <article class="panel">
-                <h3>Probably not for you if you want</h3>
-                <ul class="simple-list">
-                  <li>Deep technical offensive security training</li>
-                  <li>Certification cram content only</li>
-                  <li>Advanced senior-level governance strategy</li>
-                </ul>
+              <article class="card">
+                <h3>Audit Findings</h3>
+                <p>Clear observations, business risk, and actionable recommendations.</p>
               </article>
             </div>
           </section>
 
           <section class="section" id="weeks">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Curriculum</p>
-                <h2>What you'll cover across 8 weeks</h2>
-              </div>
-            </div>
-            <div class="week-grid">
-              <article class="week-card">
-                <h3>Week 1 — Foundations of GRC &amp; Risk</h3>
-                <p>Understand governance, risk, compliance, and how to write clear risk statements.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 2 — Threats, Breaches &amp; Why Security Fails</h3>
-                <p>Break down incidents, control failures, and real business impact.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 3 — ISO 27001 &amp; ISMS Core</h3>
-                <p>Understand how organisations structure security through an ISMS and what ISO 27001 is asking for.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 4 — Controls, Policies &amp; SoA</h3>
-                <p>Learn how risks connect to controls, policies, and the Statement of Applicability.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 5 — Risk Register &amp; Risk Assessment</h3>
-                <p>Build one of the most important artefacts in GRC: a practical risk register.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 6 — Third-Party Risk &amp; Vendor Due Diligence</h3>
-                <p>Assess vendors, identify external risk, and make risk-based decisions.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 7 — Audit, Evidence &amp; Assurance</h3>
-                <p>Learn how controls are tested, how evidence works, and how findings are written.</p>
-              </article>
-              <article class="week-card">
-                <h3>Week 8 — Capstone Project</h3>
-                <p>Bring everything together in a full GRC assessment for FinSure Payments Ltd.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Deliverables</p>
-                <h2>What you'll leave with</h2>
-              </div>
-            </div>
-            <div class="grid-3">
-              <article class="panel">
-                <h3>Portfolio artefacts</h3>
-                <p>A professional risk register, a Statement of Applicability, a short security policy, and audit findings with recommendations.</p>
-              </article>
-              <article class="panel">
-                <h3>Interview evidence</h3>
-                <p>Outputs designed to help you speak credibly about entry-level GRC work and show employers how you think.</p>
-              </article>
-              <article class="panel">
-                <h3>Job-ready framing</h3>
-                <p>Practical understanding of business risk, audit support, ISO 27001 readiness, and security governance delivery.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Employer Value</p>
-                <h2>Why employers care about this</h2>
-              </div>
-            </div>
-            <article class="panel">
+            <div class="section-heading">
+              <p class="section-kicker">Curriculum</p>
+              <h2>Programme structure.</h2>
               <p>
-                Employers need junior analysts who can communicate clearly, organise
-                evidence, understand risk in business terms, support audits, and
-                contribute to ISO 27001 and governance work. That is exactly what
-                this programme is designed to develop.
+                The curriculum moves from core concepts to practical delivery using
+                a consistent fintech case study throughout.
               </p>
-            </article>
+            </div>
+            <div class="week-list">
+              <article class="week-item">
+                <div class="week-label">Week 1</div>
+                <p><strong>Foundations of GRC &amp; Risk</strong><br />Core concepts, terminology, and structured risk statements.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 2</div>
+                <p><strong>Threats, Breaches &amp; Control Failures</strong><br />Understanding incidents, control failure, and business impact.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 3</div>
+                <p><strong>ISO 27001 &amp; ISMS</strong><br />Practical understanding of how organisations structure security.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 4</div>
+                <p><strong>Controls, Policies &amp; SoA</strong><br />Connecting risks to controls and building a Statement of Applicability.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 5</div>
+                <p><strong>Risk Register &amp; Assessment</strong><br />Developing one of the most important artefacts in GRC.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 6</div>
+                <p><strong>Third-Party Risk Management</strong><br />Assessing vendors and making informed risk decisions.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 7</div>
+                <p><strong>Audit &amp; Evidence</strong><br />Understanding control effectiveness, audit evidence, and findings.</p>
+              </article>
+              <article class="week-item">
+                <div class="week-label">Week 8</div>
+                <p><strong>Capstone Project</strong><br />Delivering a full GRC assessment for FinSure Payments Ltd.</p>
+              </article>
+            </div>
           </section>
 
-          <section class="section" id="public-work">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Featured Public Work</p>
-                <h2>Public proof of practical GRC delivery</h2>
-              </div>
+          <section class="section">
+            <div class="section-heading">
+              <p class="section-kicker">Professional Relevance</p>
+              <h2>Built from real-world practice.</h2>
+              <p>
+                Developed by a cybersecurity and GRC practitioner with experience
+                across ISO 27001, cloud security, enterprise risk, vendor risk, and
+                audit support in modern technology environments.
+              </p>
+            </div>
+            <div class="grid-2">
+              <article class="card">
+                <h3>Why this matters</h3>
+                <p>
+                  Employers need junior analysts who can support real workflows, not
+                  just repeat terminology. This programme is built to develop that capability.
+                </p>
+              </article>
+              <article class="card">
+                <h3>What employers care about</h3>
+                <p>
+                  Clear communication of risk, support for ISO 27001 activities,
+                  structured evidence handling, vendor risk awareness, and practical audit readiness.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-heading">
+              <p class="section-kicker">Public Work</p>
+              <h2>Public-safe proof of practical GRC delivery.</h2>
             </div>
             <div class="grid-3">
-              <article class="panel">
+              <article class="card">
                 <h3>GRC as Code Lab</h3>
                 <p>
-                  A governance engineering prototype that turns infrastructure
-                  findings into control outcomes, risk scoring, evidence, and
-                  executive reporting.
+                  A governance engineering prototype that turns infrastructure findings
+                  into control outcomes, risk scoring, evidence, and executive reporting.
                 </p>
               </article>
-              <article class="panel">
-                <h3>Company Direction</h3>
-                <p>
-                  Calm Resilience Security Ltd is positioned around practical
-                  assurance, resilient security design, and governance that holds
-                  up in real operations.
-                </p>
-              </article>
-              <article class="panel">
+              <article class="card">
                 <h3>Private Training Track</h3>
                 <p>
-                  Curriculum, templates, capstones, and learner materials are
-                  intentionally separated into a private repository.
+                  Curriculum, capstones, templates, and student resources are held in
+                  private repositories and shared only with authorised learners.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Company GitHub</h3>
+                <p>
+                  Calm Resilience Security Ltd maintains a public organisation profile
+                  and private repositories for controlled training delivery.
                 </p>
               </article>
             </div>
             <div class="actions">
               <a class="button button-primary" href="https://github.com/Jaymeso/grc-as-code-lab">Explore GRC Lab</a>
-              <a class="button button-secondary" href="https://github.com/Jaymeso">View GitHub profile</a>
+              <a class="button button-secondary" href="https://github.com/Calm-Resilience-Security">View company GitHub</a>
             </div>
-            <p style="margin-top: 22px; color: var(--muted); line-height: 1.7">
-              Public-safe company summaries live here. Delivery assets stay private
-              in <code>grc-analyst-launchpad</code>.
-            </p>
-          </section>
-
-          <section class="section">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Instructor</p>
-                <h2>Built from real experience</h2>
-              </div>
-            </div>
-            <article class="panel">
-              <p>
-                Built by a cybersecurity and GRC practitioner with real-world
-                experience across ISO 27001, cloud security, enterprise risk, audit
-                support, and third-party risk in modern technology environments.
-                This is not generic course content. It is designed around how
-                security governance actually operates inside growing companies.
-              </p>
-            </article>
           </section>
 
           <section class="section" id="pricing">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Pricing</p>
-                <h2>Choose the level of support you want</h2>
-              </div>
-            </div>
-            <article class="panel" style="margin-bottom: 16px; border-color: rgba(185, 120, 22, 0.34); background: rgba(255, 250, 241, 0.88)">
-              <h3>Launch Offer</h3>
+            <div class="section-heading">
+              <p class="section-kicker">Pricing</p>
+              <h2>Start with the level of support that suits you.</h2>
               <p>
-                For a limited time, the Guided programme is available at the
-                Self-Paced price.
+                The founding cohort offer is currently available on the Guided tier.
               </p>
-              <p style="margin-top: 10px">
-                This is an early cohort offer as we refine the programme with our
-                first group of learners.
-              </p>
-            </article>
+            </div>
+            <div class="offer-banner">
+              Founding Cohort Offer: join the first cohort and receive Guided access
+              at the Self-Paced price.
+            </div>
             <div class="pricing-grid">
               <article class="price-card">
-                <h3>Self-Paced</h3>
-                <p>Access the full 8-week programme, templates, and capstone materials.</p>
+                <div>
+                  <h3>Self-Paced</h3>
+                  <p>Best for independent learners.</p>
+                </div>
+                <div class="price">£99</div>
+                <ul>
+                  <li>Full 8-week curriculum</li>
+                  <li>Templates and workbooks</li>
+                  <li>Case study and capstone materials</li>
+                  <li>Self-directed progression</li>
+                </ul>
+                <div class="pricing-foot">
+                  <a
+                    class="button button-secondary"
+                    href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20Self-Paced%20enquiry"
+                  >
+                    Choose Self-Paced
+                  </a>
+                </div>
+              </article>
+              <article class="price-card featured">
+                <span class="badge" style="width: fit-content">Most Popular</span>
+                <div>
+                  <h3>Guided</h3>
+                  <p>Best for learners who want feedback and structure.</p>
+                </div>
+                <div class="price">£99 <span>launch offer</span></div>
+                <p style="margin-top: -10px">Normally £249. Available for the first cohort only.</p>
+                <ul>
+                  <li>Everything in Self-Paced</li>
+                  <li>Structured feedback on submissions</li>
+                  <li>Greater accountability and support</li>
+                  <li>Ideal for first-cohort learners</li>
+                </ul>
+                <div class="pricing-foot">
+                  <a
+                    class="button button-primary"
+                    href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20Guided%20launch%20offer"
+                  >
+                    Choose Guided
+                  </a>
+                </div>
               </article>
               <article class="price-card">
-                <h3>Guided — Most Popular</h3>
-                <p>Everything in Self-Paced, plus structured feedback on your work.</p>
-                <p style="margin-top: 10px; color: var(--forest); font-weight: 700">Launch Offer: £99 (normally £249)</p>
-                <p style="margin-top: 8px">Available for the first cohort only.</p>
-              </article>
-              <article class="price-card">
-                <h3>Premium</h3>
-                <p>Everything in Guided, plus direct review, coaching, and interview support.</p>
+                <div>
+                  <h3>Premium</h3>
+                  <p>Best for career switchers and high-support learners.</p>
+                </div>
+                <div class="price">By application</div>
+                <ul>
+                  <li>Everything in Guided</li>
+                  <li>Direct review and coaching</li>
+                  <li>Interview preparation support</li>
+                  <li>Higher-touch guidance</li>
+                </ul>
+                <div class="pricing-foot">
+                  <a
+                    class="button button-secondary"
+                    href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20Premium%20enquiry"
+                  >
+                    Enquire about Premium
+                  </a>
+                </div>
               </article>
             </div>
           </section>
 
           <section class="section" id="faq">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Frequently Asked Questions</p>
-                <h2>Answers to common questions</h2>
-              </div>
+            <div class="section-heading">
+              <p class="section-kicker">Frequently Asked Questions</p>
+              <h2>Common questions from prospective learners.</h2>
             </div>
             <div class="faq-grid">
               <article class="faq-item">
                 <h3>Do I need a technical background?</h3>
-                <p>No. This programme is designed to be accessible to beginners and career switchers.</p>
+                <p>No. The programme is designed to be accessible to beginners, graduates, and career switchers.</p>
               </article>
               <article class="faq-item">
-                <h3>Is this only for people pursuing ISO 27001 roles?</h3>
-                <p>No. It is broader than ISO and prepares you for junior GRC, security analyst, risk, audit-adjacent, and ISMS support roles.</p>
+                <h3>Is this only for ISO 27001 roles?</h3>
+                <p>No. ISO 27001 is covered, but the programme is broader and supports entry-level GRC, risk, audit, and security governance roles.</p>
               </article>
               <article class="faq-item">
-                <h3>Will I get templates and practical materials?</h3>
-                <p>Yes. Templates and structured materials are built into the programme so you can produce professional outputs.</p>
+                <h3>Will I receive templates and practical materials?</h3>
+                <p>Yes. Templates are included so you can produce structured, professional outputs throughout the programme.</p>
               </article>
               <article class="faq-item">
-                <h3>Is there a capstone project?</h3>
-                <p>Yes. The capstone is a full GRC simulation based on FinSure Payments Ltd.</p>
-              </article>
-              <article class="faq-item">
-                <h3>Can I use the final work in interviews?</h3>
-                <p>Yes. The programme is designed to give you portfolio-quality outputs you can discuss with employers.</p>
+                <h3>Can I use the outputs in interviews?</h3>
+                <p>Yes. The programme is designed to help you discuss real artefacts and demonstrate practical understanding to employers.</p>
               </article>
             </div>
           </section>
 
-          <section class="cta-band">
-            <p class="section-kicker" style="color: rgba(255, 252, 247, 0.72)">Final Call To Action</p>
-            <h2>Become a job-ready GRC analyst.</h2>
+          <section class="cta-band" id="contact">
+            <p class="section-kicker" style="color: rgba(255, 252, 247, 0.72)">Next Step</p>
+            <h2>Develop practical GRC capability that employers recognise.</h2>
             <p>
-              Learn the fundamentals, build real artefacts, and develop practical
-              skills that employers actually value.
+              Learn the fundamentals, produce real artefacts, and build confidence
+              in the work expected of an entry-level GRC analyst.
             </p>
             <div class="actions">
-              <a class="button button-primary" href="#contact">Enrol now</a>
-              <a class="button button-secondary" href="#contact">Join the waitlist</a>
+              <a
+                class="button button-primary"
+                href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20enrolment%20enquiry"
+              >
+                Enrol now
+              </a>
+              <a
+                class="button button-secondary"
+                href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20-%20waitlist"
+              >
+                Join the waitlist
+              </a>
             </div>
-          </section>
-
-          <section class="section" id="contact">
-            <div class="section-header">
-              <div>
-                <p class="section-kicker">Enrolment</p>
-                <h2>Ready to join the first cohort?</h2>
-              </div>
-            </div>
-            <article class="panel">
-              <p>
-                Email
-                <a href="mailto:james.omorogbe@calmsecurity.uk?subject=GRC%20Analyst%20Launchpad%20enquiry" style="font-weight: 700; color: var(--forest)">james.omorogbe@calmsecurity.uk</a>
-                to enrol or join the waitlist.
-              </p>
-              <p style="margin-top: 10px">
-                If your browser does not open an email app automatically, copy the
-                address above and send your enquiry directly.
-              </p>
-            </article>
           </section>
         </div>
 
         <footer>
-          Calm Resilience Security Ltd. Practical security governance, risk, and assurance for modern organisations.
+          <div class="footer-note">
+            <strong>Calm Resilience Security Ltd</strong><br />
+            Practical GRC training built for real operating environments. Future
+            consultancy services will focus on security governance, risk, assurance,
+            and resilient security design.
+          </div>
+          <div>
+            <a href="mailto:james.omorogbe@calmsecurity.uk">james.omorogbe@calmsecurity.uk</a><br />
+            &copy; 2026 Calm Resilience Security Ltd
+          </div>
         </footer>
       </div>
     </main>
