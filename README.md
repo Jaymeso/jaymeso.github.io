@@ -1,12 +1,13 @@
-# jaymeso.github.io
+# calmsecurity.uk
 
-Public landing page for Jaymes O's GRC training work.
+Public GitHub Pages site for Calm Resilience Security Ltd.
 
-This repository should contain only public-safe content such as:
+This repository contains only public-safe website content:
 
-- a short introduction
-- a course summary
-- contact details or an inquiry path
-- links to public profiles
+- company positioning
+- service summaries
+- GRC Analyst Launchpad overview
+- contact details
+- public brand assets
 
-Do not place private training assets, templates, workbooks, or capstone documents in this repository.
+Do not place private training assets, templates, workbooks, capstone documents, or learner materials in this repository.
