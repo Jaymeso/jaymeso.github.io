@@ -18,11 +18,11 @@ Why this works:
 
 ## Logo Direction
 
-The mark uses three ideas:
+The adopted mark uses three ideas:
 
-- a shield for trust, assurance, and protection
-- outward ripple rings for resilience, continuity, and calm spreading through disruption
-- a gold center point for clarity, signal, and confident decision-making
+- a protective C-shaped ring for calm, continuity, and protection
+- a compact CR monogram for brand recognition
+- a restrained gold accent for clarity, signal, and confident decision-making
 
 ## Suggested Palette
 
@@ -36,6 +36,8 @@ The mark uses three ideas:
 ## Files
 
 - `assets/calm-resilience-security-logo.svg`: horizontal logo with strapline
+- `assets/calm-resilience-security-logo.jpg`: adopted cropped JPEG site mark
+- `assets/calm-resilience-security-logo-sample.jpg`: full-size JPEG sample for reuse
 - `assets/calm-resilience-security-mark.svg`: square brand mark for avatars and icons
 - `assets/calm-resilience-security-mark-512.png`: recommended GitHub-ready upload file
 - `assets/calm-resilience-security-mark-1024.png`: high-resolution square PNG export

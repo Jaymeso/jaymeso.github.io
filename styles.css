@@ -74,6 +74,7 @@ img {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
+  object-fit: cover;
 }
 
 .brand-title {
