@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRC as Code Lab | Calm Resilience Security</title>
+    <meta
+      name="description"
+      content="A Calm Resilience Security GRC as Code Lab dashboard showing release risk, control posture, evidence coverage, and executive governance actions."
+    />
+    <link rel="icon" href="../assets/calm-resilience-security-logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html" aria-label="Calm Resilience Security home">
+          <img class="brand-mark" src="../assets/calm-resilience-security-logo.jpg" alt="" aria-hidden="true" />
+          <span>
+            <span class="brand-title">Calm Resilience Security</span>
+            <span class="brand-sub">Calm under pressure. Security by design.</span>
+          </span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a class="active" href="../training.html">Training</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero lab-hero">
+        <div class="container lab-hero-grid">
+          <div>
+            <p class="eyebrow">GRC as Code Lab</p>
+            <h1>Executive governance dashboard.</h1>
+            <p class="lead">
+              A simulated fintech release view that translates infrastructure control evidence into release risk,
+              assurance posture, and leadership action.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#control-results">Review control results</a>
+              <a class="button" href="../contact.html">Discuss a lab</a>
+            </div>
+          </div>
+          <aside class="release-panel" aria-label="Current release decision">
+            <span class="release-label">Current decision</span>
+            <strong>Block deployment</strong>
+            <p>The current control posture exceeds release tolerance and should be stopped pending remediation.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <p class="section-kicker">Release posture</p>
+          <h2>Control evidence converted into an executive decision.</h2>
+          <div class="lab-metrics" aria-label="Dashboard summary metrics">
+            <article class="lab-metric">
+              <span>Compliance score</span>
+              <strong>44.44%</strong>
+              <p>4 of 9 assessed controls passing</p>
+            </article>
+            <article class="lab-metric risk-high">
+              <span>Risk level</span>
+              <strong>High</strong>
+              <p>Aggregate risk score: 180</p>
+            </article>
+            <article class="lab-metric decision-block">
+              <span>Decision</span>
+              <strong>Block</strong>
+              <p>5 failed controls require action</p>
+            </article>
+            <article class="lab-metric">
+              <span>Evidence coverage</span>
+              <strong>9/9</strong>
+              <p>0 controls still lack evidence</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container lab-layout">
+          <article class="lab-panel">
+            <p class="section-kicker">Executive summary</p>
+            <h2>Decision context</h2>
+            <p class="section-copy">
+              The current release candidate remains above acceptable deployment tolerance. This dashboard surfaces
+              the specific control failures driving the decision and keeps technical evidence visible for engineering,
+              audit, and governance stakeholders.
+            </p>
+            <div class="framework-summary" aria-label="Framework summary">
+              <div>
+                <span>ISO 27001</span>
+                <strong>4 pass / 5 fail</strong>
+              </div>
+              <div>
+                <span>SOC 2</span>
+                <strong>4 pass / 5 fail</strong>
+              </div>
+              <div>
+                <span>NIST</span>
+                <strong>4 pass / 5 fail</strong>
+              </div>
+            </div>
+          </article>
+
+          <aside class="lab-panel lab-actions">
+            <p class="section-kicker">Priority actions</p>
+            <h2>Next moves</h2>
+            <ul class="list-clean">
+              <li>Turn on S3 versioning to support rollback, recovery, and retention needs.</li>
+              <li>Apply KMS-backed encryption to S3 storage used for regulated data.</li>
+              <li>Remove wildcard IAM permissions and tighten least-privilege boundaries.</li>
+              <li>Strengthen recovery controls to improve resilience and restore capability.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-white" id="control-results">
+        <div class="container">
+          <p class="section-kicker">Control detail</p>
+          <h2>Control results</h2>
+          <div class="table-wrap">
+            <table class="control-table">
+              <thead>
+                <tr>
+                  <th>Control</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Severity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="control-id">GRC-401</td>
+                  <td>Approved Cloud Services Must Be Governed</td>
+                  <td><span class="badge status-fail">Fail</span></td>
+                  <td><span class="badge severity-high">High</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-001</td>
+                  <td>Public S3 Buckets Prohibited</td>
+                  <td><span class="badge status-pass">Pass</span></td>
+                  <td><span class="badge severity-high">High</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-002</td>
+                  <td>S3 Versioning Required</td>
+                  <td><span class="badge status-fail">Fail</span></td>
+                  <td><span class="badge severity-medium">Medium</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-201</td>
+                  <td>S3 Buckets Must Use KMS Encryption</td>
+                  <td><span class="badge status-fail">Fail</span></td>
+                  <td><span class="badge severity-high">High</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-101</td>
+                  <td>No Wildcard IAM Policies</td>
+                  <td><span class="badge status-fail">Fail</span></td>
+                  <td><span class="badge severity-high">High</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-301</td>
+                  <td>S3 Buckets Must Have Access Logging Enabled</td>
+                  <td><span class="badge status-pass">Pass</span></td>
+                  <td><span class="badge severity-medium">Medium</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-601</td>
+                  <td>Public Network Exposure Must Be Restricted</td>
+                  <td><span class="badge status-pass">Pass</span></td>
+                  <td><span class="badge severity-high">High</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-501</td>
+                  <td>S3 Buckets Must Support Recovery</td>
+                  <td><span class="badge status-fail">Fail</span></td>
+                  <td><span class="badge severity-medium">Medium</span></td>
+                </tr>
+                <tr>
+                  <td class="control-id">GRC-701</td>
+                  <td>Secure Development Requirements Must Be Defined</td>
+                  <td><span class="badge status-pass">Pass</span></td>
+                  <td><span class="badge severity-medium">Medium</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container evidence-grid">
+          <article class="lab-panel">
+            <p class="section-kicker">Raw governance report</p>
+            <h2>Technical evidence</h2>
+            <pre class="evidence-block">=== COMPLIANCE REPORT ===
+
+GRC-401 - Approved Cloud Services Must Be Governed: FAIL (HIGH)
+GRC-001 - Public S3 Buckets Prohibited: PASS (HIGH)
+GRC-002 - S3 Versioning Required: FAIL (MEDIUM)
+GRC-201 - S3 Buckets Must Use KMS Encryption: FAIL (HIGH)
+GRC-101 - No Wildcard IAM Policies: FAIL (HIGH)
+GRC-301 - S3 Buckets Must Have Access Logging Enabled: PASS (MEDIUM)
+GRC-601 - Public Network Exposure Must Be Restricted: PASS (HIGH)
+GRC-501 - S3 Buckets Must Support Recovery: FAIL (MEDIUM)
+GRC-701 - Secure Development Requirements Must Be Defined: PASS (MEDIUM)
+
+Compliance Score: 44.44%
+Controls Assessed: 9
+Controls Not Evidenced: 0
+Total Risk Score: 180
+Risk Level: HIGH
+Decision: BLOCK DEPLOYMENT</pre>
+          </article>
+
+          <article class="lab-panel">
+            <p class="section-kicker">Governance value</p>
+            <h2>What the lab demonstrates</h2>
+            <p class="section-copy">
+              The lab shows how GRC as Code can turn infrastructure evidence into language that engineers,
+              auditors, and executives can all use: control status, severity, release tolerance, and actions.
+            </p>
+            <ul class="list-clean">
+              <li>Controls are assessed from evidence rather than assertion.</li>
+              <li>Framework summaries are translated into release posture.</li>
+              <li>Risk decisions stay visible, explainable, and repeatable.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-panel">
+        <div class="container contact-grid">
+          <div>
+            <p class="section-kicker">Build capability</p>
+            <h2>Turn governance evidence into decisions people can act on.</h2>
+            <p class="section-copy">
+              Calm Resilience Security designs practical labs and training for teams that need security governance
+              to be clear, evidenced, and resilient.
+            </p>
+          </div>
+          <div class="card dark-card">
+            <h3>Discuss a GRC as Code lab</h3>
+            <p>Email: <a href="mailto:info@calmsecurity.uk">info@calmsecurity.uk</a></p>
+            <a class="button primary" href="mailto:info@calmsecurity.uk">Email Calm Security</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <strong>Calm Resilience Security Ltd</strong>
+        <span><a href="mailto:info@calmsecurity.uk">info@calmsecurity.uk</a></span>
+        <span>Registered in England with company number 16876614.</span>
+        <span>Registered office: 124 City Road, London, EC1V 2NX.</span>
+      </div>
+    </footer>
+  </body>
+</html>
